@@ -1,0 +1,27 @@
+import * as mongoose from 'mongoose';
+
+export const LookupSchema = new mongoose.Schema({
+  ip: String,
+  success: Boolean,
+  type: String,
+  continent: String,
+  continent_code: String,
+  country: String,
+  country_code: String,
+  region: String,
+  region_code: String,
+  city: String,
+  latitude: Number,
+  longitude: Number,
+  is_eu: Boolean,
+  postal: String,
+  calling_code: String,
+  capital: String,
+  borders: String,
+  flag: Object,
+  connection: Object,
+  timezone: Object,
+  currency: Object,
+  security: Object,
+  expiryDate: { type: Date, default: Date.now, index: { expires: '1m' } },
+});
